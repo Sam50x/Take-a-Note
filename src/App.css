@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.app{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header text-area"
+                         "notes text-area";
+    grid-template-rows: 35% 65%;
+    grid-template-columns: 1fr 2fr;
+}
+
+.text-area textarea{
+    border: none;
+    background: none;
+    grid-area: text-area;
+    width: calc(100% - 30px);
+    height: 100vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 15px;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+}
+
+header h2{
+    font-size: 40px;
+    padding: 15px;
+    margin: 5px;
+    margin-bottom: 0;
+    line-height: 2.8rem;
+}
+
+header button{
+    border: none;
+    background: none;
+    font-size: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header button:hover{
+    color: green;
+    transform: scale(1.2);
+}
+
+.notes{
+    grid-area: notes;
+    width: 100%;
+}
+
+.note{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.note input{
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 20px 12px;
+    width: 50%;
+}
+
+.active{
+    background-color: blue;
+}
+
+.active input{
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width: 500px){
+    .app{
+        grid-template-areas: "header"
+                             "notes"
+                             "text-area";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
