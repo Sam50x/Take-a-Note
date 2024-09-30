@@ -5,6 +5,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+body{
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
 .app{
     height: 100vh;
     display: grid;
